@@ -1,0 +1,36 @@
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Global scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Remove arrows */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #54150c;
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #830b09;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #E2DADD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

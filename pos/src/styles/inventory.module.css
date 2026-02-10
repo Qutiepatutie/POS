@@ -1,0 +1,257 @@
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color:#e76959;
+}
+
+.hidden {
+    display: none;
+}
+
+.tableContainer {
+    height: 80%;
+    width: 80%;
+
+    border: 2px solid #830b09;
+    background-color: #54150c;
+    color: #E2DADD;
+    border-radius: 10px;
+    overflow:hidden;
+    overflow: auto;
+
+    margin-bottom: 0.5em;
+
+    box-shadow: 0 0 10px 2px #830b09;
+
+}
+
+.tableContainer table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.tableContainer table thead {
+    position:sticky;
+    top: 0;
+    background-color: #54150c;
+    height: 2.5em;
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: #E2DADD;
+
+    z-index: 2;
+}
+
+.tableContainer table thead::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px solid #830b09;
+    border-radius: 5px;
+} 
+
+.tableContainer table td {
+    text-align: center;
+    font-size: 1.2em;
+    height: 2em;
+}
+
+.tableContainer table tbody tr:hover {
+    background-color: #830b09;
+}
+
+.tableContainer .editWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+}
+
+.tableContainer td:first-child .rmvRow {
+    position: absolute;
+    left: 10px;
+}
+
+.tableContainer input {
+    width: 60%;
+    text-align: center;
+    font-size: 1.2em;
+    border:none;
+    background-color: transparent;
+}
+
+.tableContainer input[type=number]::-webkit-inner-spin-button, 
+.tableContainer input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tableContainer input:disabled {
+    color: inherit;
+}
+
+.tableContainer input:not(:disabled) {
+    border-bottom: 1px solid #830b09;
+    color: inherit;
+}
+
+.tableContainer td:nth-child(3) .editWrapper input,
+.tableContainer td:nth-child(4) .editWrapper input {
+    width: 20%;
+}
+
+.tableContainer .qtyDown,
+.tableContainer .qtyUp,
+.tableContainer .rmvRow {
+    position: relative;
+    height: 1.5em;
+    width: 1.5em;
+
+    border-radius: 50%;
+
+}
+.tableContainer .qtyDown:hover,
+.tableContainer .qtyUp:hover,
+.tableContainer .rmvRow:hover{
+    cursor: pointer;
+    background-color: #54150c;
+}
+
+.tableContainer .qtyDown::after,
+.tableContainer .rmvRow::after {
+    position: absolute;
+    content:"";
+    height: 3px;
+    width: 12px;
+    border-radius: 5px;
+
+    background-color: #B22222;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.tableContainer .qtyUp::after {
+    position: absolute;
+    content:"";
+    height: 3px;
+    width: 12px;
+    border-radius: 5px;
+
+    background-color: #2A5CAA;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.tableContainer .qtyUp::before {
+    position: absolute;
+    content:"";
+    height: 3px;
+    width: 12px;
+    border-radius: 5px;
+
+    background-color: #2A5CAA;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.tableContainer .rmvRow::after {
+    position: absolute;
+    content:"";
+    height: 3px;
+    width: 15px;
+    border-radius: 5px;
+
+    background-color: #B22222;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.tableContainer .rmvRow::before {
+    position: absolute;
+    content:"";
+    height: 3px;
+    width: 15px;
+    border-radius: 5px;
+
+    background-color: #B22222;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.buttons {
+    height: 5%;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1em;
+
+}
+
+.filesBtns,
+.tableBtns {
+    display: flex;
+    justify-content: right;
+    width: 30%;
+    height: 100%;
+    gap: 0.5em;
+    
+    background-color: #e76959;
+    
+}
+
+.buttons .btn {
+    height: 80%;
+    width: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #54150c;
+    gap: 0.5em;
+    
+    border: 3px solid #830b09;
+    color: #E2DADD;
+    border-radius: 10px;
+    
+    user-select: none;
+}
+
+.buttons .btnIcon {
+    height: 70%;
+    filter: invert(1);
+    left: 0;
+}
+
+.buttons .btn:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}

@@ -1,0 +1,96 @@
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    background-color:#e76959;
+}
+
+.tableContainer {
+    height: 80%;
+    width: 80%;
+
+    border: 2px solid #830b09;
+    border-radius: 10px;
+    background-color: #54150c;
+    color: #E2DADD;
+    overflow:hidden;
+    overflow: auto;
+
+    
+    box-shadow: 0 0 10px 2px #830b09;
+
+}
+
+.tableContainer table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.tableContainer table thead {
+    position:sticky;
+    top: 0;
+    background-color: #54150c;
+    height: 2.5em;
+    padding: 0.5em;
+    font-size: 1.2em;
+
+    z-index: 2;
+}
+
+.tableContainer table thead::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 98%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px solid #830b09;
+    border-radius: 5px;
+} 
+
+.tableContainer table td {
+    text-align: center;
+    font-size: 1.2em;
+    height: 2em;
+}
+
+.tableContainer table tbody tr:hover {
+    background-color: #830b09;
+}
+
+.exportBtn {
+    height: 2.5em;
+    width: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    background-color: #54150c;
+
+    border: 3px solid #830b09;
+    color: #E2DADD;
+    border-radius: 10px;
+    
+    user-select: none;
+}
+
+.btnIcon {
+    height: 70%;
+    filter: invert(1);
+    left: 0;
+}
+
+.exportBtn:hover {
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1.01);
+}

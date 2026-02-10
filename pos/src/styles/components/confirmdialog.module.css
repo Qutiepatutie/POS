@@ -1,0 +1,75 @@
+
+.confirmPopUp {
+    margin: auto;
+    height: 180px;
+    width: 320px;
+
+
+    border: 3px solid #830b09;
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px 2px #54150c;
+
+    background-color: #54150c;
+    color: white;
+
+    padding: 0.5em;
+}
+
+.confirmPopUp:open {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.confirmPopUp::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.inputField {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.inputField label {
+    font-size: 2em;
+}
+
+.inputField input {
+    height: 2.5em;
+    width: 80%;
+
+    padding-left: 0.5em;
+    color: white;
+    font-size: 1em;
+
+    background-color: #7A1E2B;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.buttons button {
+    height: 2.5em;
+    width: 35%;
+
+    background-color: #54150c;
+    border: 3px solid #830b09;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.buttons button:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}

@@ -1,0 +1,59 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    
+    display: grid;
+
+    grid-template-columns: 6fr 4fr;
+    overflow: hidden;
+}
+
+.items {
+    background-image: linear-gradient(#e76959, #da341f);
+    border: 5px solid #830b09;
+
+    display: flex;
+    gap: 1em;
+    padding:2em;
+
+    flex-wrap: wrap;
+    overflow-x: auto;
+    align-content: flex-start; 
+
+    box-sizing: border-box;
+}
+
+.itemsPanel {
+    width: 200px;
+    height: 250px;
+
+    border: 3px solid #830b09;
+    border-radius: 10px;
+    color: white;
+
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.itemsPanel .itemImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemsPanel .info {
+    text-align: center;
+}
+
+.itemsPanel .itemImg {
+    width: 80%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    object-fit: contain;
+}
+
+.receipt {
+    height: 100vh;
+    background-color: #54150c;
+}

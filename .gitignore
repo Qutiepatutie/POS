@@ -1,0 +1,8 @@
+# React
+pos/node_modules/
+pos/build/
+pos/dist/
+pos/dist-ssr/
+pos/*.local
+pos/.env
+pos/README.md

@@ -1,0 +1,136 @@
+.table {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    min-height: 0;
+
+    color: white;
+    background-color: #54150c;
+}
+
+.table.orders {
+    .itemsTable th {
+        font-size: 2.5em;
+    }
+}
+
+.table.main td {
+    font-size: 1.4em;
+}
+
+.table p {
+    min-width: 100%;
+    display: flex;
+}
+
+.unit {
+    margin-right: auto;
+}
+
+.itemsTableContainer {
+    /* height: 80vh; */
+    overflow: hidden;
+    overflow-y: auto;
+    min-height: 0;
+
+}
+
+.itemsTable col:nth-child(1) {width: 60%;}
+.itemsTable col:nth-child(2) {width: 20%;}
+.itemsTable col:nth-child(3) {width: 20%;}
+
+.itemsTable {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.itemsTable tr td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.itemsTable .reduce {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.itemsTable .reduce::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 3px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50% ,-50%);
+
+    background-color: brown;
+}
+
+.itemsTable .reduce:hover {
+    background-color: #ededed;
+}
+
+.itemsTable th { 
+    box-shadow: inset 0 -5px 0 #830b09;
+    
+    position: sticky;
+    top: 0;
+    font-size: 2em;
+    padding: 0.2em 0.5em;
+    background-color: #54150c;
+    z-index: 2;
+}
+
+.itemsTable td {
+    font-size: 2em;
+    padding: 0 1em;
+    
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.itemsTable th:nth-child(1),
+.itemsTable td:nth-child(1) {text-align: left;}
+
+.itemsTable th:nth-child(2),
+.itemsTable td:nth-child(2) {text-align: center;}
+
+.itemsTable th:nth-child(3),
+.itemsTable td:nth-child(3) {text-align: right;}
+
+.paymentTable { 
+    width: 100%;
+    height: 100%;
+    border: 5px solid #830b09;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    font-size: 1.5em;
+}
+
+.paymentTable tr:first-child {
+    border-bottom: 5px solid var(--border-color);
+}
+
+.paymentTable tr:last-child td {
+    border-top: 5px solid #830b09;
+}
+
+.paymentTable td {
+    font-size: 2em;
+    padding: 0 1em;
+}
+
+.paymentTable td:nth-child(1) {text-align: left;}
+.paymentTable td:nth-child(2) {text-align: right;}
