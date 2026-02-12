@@ -82,6 +82,9 @@ export default function Orders() {
                                     <img
                                         className={styles.itemImg}
                                         src={itemImg}
+                                        onError={(e) => {
+                                            e.currentTarget.src = placeholder;
+                                        }}
                                     />
                                 </div>
                                 <div className={styles.info}>

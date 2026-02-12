@@ -55,7 +55,7 @@ export default function Main() {
     } = useUpdateTable();
 
     useEffect(() => {
-        setChange(Number(payment) - totalPrice);
+        setChange(Number(payment) - Number(totalPrice));
     }, [payment, totalPrice]);
 
     useEffect(() => {
@@ -81,7 +81,7 @@ export default function Main() {
                 currItem.name === item.name
                     ? {
                         ...currItem,
-                        qty: Math.max(currItem.qty - 1, 0)
+                        qty: Math.max(Number(currItem.qty) - 1, 0)
                     }
                     : currItem
             );
@@ -95,7 +95,7 @@ export default function Main() {
         channelRef.current.postMessage({type: "ADD_ITEM", itemPayload});
 
         addItem(setOrderList, itemPayload);
-        setTotalPrice(prevTotal => prevTotal + itemPayload.price);
+        setTotalPrice(prevTotal => Number(prevTotal) + Number(itemPayload.price));
     }
 
     const reduceQty = (item) => {
@@ -113,7 +113,7 @@ export default function Main() {
         });
 
         reduceItem(setOrderList, item);
-        setTotalPrice(prevTotal => prevTotal - item.price);
+        setTotalPrice(prevTotal => Number(prevTotal) - Number(item.price));
     }
 
     const useCalcButton = (button) => {
