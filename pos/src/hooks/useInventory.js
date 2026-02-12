@@ -43,11 +43,17 @@ export function useInventory(setRecords) {
 
             // Convert rows to objects (manual mapping)
             const json = dataRows.map(row => ({
-                name: row[0] ?? "",
-                type: row[1] ?? "",
+                name: row[0].toString().trim() ?? "",
+                type: row[1].toString().trim() ?? "",
                 qty: Number(row[2]) || 0,
                 price: Number(row[3]) || 0
-            }));
+            }))
+            .filter(item  =>
+                item.name !== "" ||
+                item.type !== "" ||
+                item.qty !==  0 ||
+                item.price !== 0
+            );
 
             localStorage.setItem("items", JSON.stringify(json));
             setItems(json);
