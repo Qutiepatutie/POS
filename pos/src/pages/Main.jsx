@@ -145,8 +145,8 @@ export default function Main() {
     }
 
     const confirmOrder = () => {
-
         addLog(orderList, cashierName);
+        channelRef.current.postMessage({type: "CONFIRM"});
     }
 
     return (

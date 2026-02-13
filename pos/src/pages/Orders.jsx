@@ -22,7 +22,7 @@ export default function Orders() {
     } = useUpdateTable();
 
     useEffect(() => {
-        setChange(payment - totalPrice);
+        setChange(Number(payment) - Number(totalPrice));
     }, [payment, totalPrice]);
 
     useEffect(() => {
@@ -52,7 +52,7 @@ export default function Orders() {
                 if(button === "Cancel Order") {
                     setItems([]);
                     setTotalPrice(0);
-                    setPayment(0);
+                    setPayment("0");
                     return;
                 }
 
@@ -60,6 +60,10 @@ export default function Orders() {
                 addPayment(setPayment, button);
             
                 console.log(payment);
+            }else if (data.type === "CONFIRM") {
+                setItems([]);
+                setTotalPrice(0);
+                setPayment("0");
             }
         };
 
